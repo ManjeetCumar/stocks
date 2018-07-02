@@ -1,0 +1,43 @@
+<p>
+  Games !
+</p>
+<!-- <img width="300" alt="Angular Logo" src={{imgurl}}>
+<button></button>
+<button></button>
+<input> -->
+
+<!-- <div *ngFor="let el of game">
+  <p>{{el.name}}
+  <img width="100px" src={{el.url}}></p>
+</div>
+  <label for = "gamename">Name</label><input [(ngModel)]="gamen" name="gamename" >
+  <label for = "gameurl">Url</label><input [(ngModel)]="gameur" name="gameurl" >
+  <button (click)="game.push({name:gamen,url:gameur})">Add</button> 
+  <button (click)="game.pop()">Remove</button>    -->
+
+  <div *ngIf = "!selector; else elseblock" class= "container row bg-light" 
+        style="border:solid rgb(200, 255, 0); padding-top: 10px; border-radius: 10px ">
+      <div *ngFor="let el of game" class="col-md-4 ">
+          <p><a (click)="selector = el"> 
+            <img width="100px" src={{el.url}}></a></p>
+        </div>
+  </div>
+  <ng-template #elseblock >
+
+    <app-singleimage [selectedgame]="selector" (backbutton)="selector=''"></app-singleimage>
+    <!-- <div class= "container bg-light" style=" border:solid rgb(200, 255, 0);
+      padding-top: 10px;padding-bottom: 20px; border-radius: 10px; ">
+      
+      <button (click)="selector = ''" class="btn btn-primary float-right" ><<</button>
+       Name: <i>{{selector.name}}</i><br />
+       <img width="100px" src={{selector.url}}><br />
+       Some Players are <div *ngFor="let el of selector.players">
+           <em>{{el}}</em>;
+       </div>
+    </div>
+    <br/>
+    <label for = "gamename">Name</label><input [(ngModel)]="gamen" name="gamename" >&nbsp;
+    <label for = "gameurl">Url</label><input [(ngModel)]="gameur" name="gameurl" >
+    <button (click)="game.push({name:gamen,url:gameur})">Add</button> 
+    <button (click)="game.pop()">Remove</button>  -->
+  </ng-template>

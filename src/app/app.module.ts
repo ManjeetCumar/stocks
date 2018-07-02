@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
+import { ImageviewerComponent } from './components/imageviewer/imageviewer.component';
+import { SingleimageComponent } from './components/singleimage/singleimage.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImageviewerComponent,
+    SingleimageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+<div class= "container bg-light" style=" border:solid rgb(200, 255, 0);
+      padding-top: 10px;padding-bottom: 20px; border-radius: 10px; ">
+      
+      <button (click)="backbutton.emit()" class="btn btn-primary float-right" ><<</button>
+       Name: <i>{{thegame.name}}</i><br />
+       <img width="100px" src={{thegame.url}}><br />
+       Some Players are <div *ngFor="let el of thegame.players">
+           <em>{{el}}</em>
+       </div>
+    </div>
