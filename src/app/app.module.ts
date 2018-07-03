@@ -5,12 +5,14 @@ import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { ImageviewerComponent } from './components/imageviewer/imageviewer.component';
 import { SingleimageComponent } from './components/singleimage/singleimage.component';
+import { FindPipe } from './pipes/find.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageviewerComponent,
-    SingleimageComponent
+    SingleimageComponent,
+    FindPipe
   ],
   imports: [
     BrowserModule,

@@ -15,12 +15,15 @@
   <button (click)="game.push({name:gamen,url:gameur})">Add</button> 
   <button (click)="game.pop()">Remove</button>    -->
 
-  <div *ngIf = "!selector; else elseblock" class= "container row bg-light" 
+  <div *ngIf = "!selector; else elseblock" class= "container bg-light" 
         style="border:solid rgb(200, 255, 0); padding-top: 10px; border-radius: 10px ">
-      <div *ngFor="let el of game" class="col-md-4 ">
+   Search<input type="text" class="form-control" [(ngModel)]="searchTerm"> <br/>
+   <div class = "row">
+      <div *ngFor="let el of game | find : searchTerm" class="col-md-4 ">
           <p><a (click)="selector = el"> 
             <img width="100px" src={{el.url}}></a></p>
         </div>
+      </div>
   </div>
   <ng-template #elseblock >
 
@@ -33,7 +36,7 @@
        <img width="100px" src={{selector.url}}><br />
        Some Players are <div *ngFor="let el of selector.players">
            <em>{{el}}</em>;
-       </div>
+       </div> 
     </div>
     <br/>
     <label for = "gamename">Name</label><input [(ngModel)]="gamen" name="gamename" >&nbsp;

@@ -11,6 +11,7 @@ export class ImageviewerComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   selector;
   gamen;
   gameur;
@@ -28,7 +29,7 @@ export class ImageviewerComponent implements OnInit {
     name: "badminton",
     url: "../assets/images/badminton.jpg",
     players: ['Sania', 'Sindhu']
-    },{
+    },{ 
       name: "boxing",
       url: "../assets/images/box.jpg",
       players: ['Tyson', 'Ali','Rocky']
@@ -39,8 +40,9 @@ export class ImageviewerComponent implements OnInit {
         players: ['Rohit', 'Rahul','nada','majeet','narwal']
         }]
 
-        setselector(index){
-              this.selector= index
-              console.log("value of selector:",index);
-        }
+        searchTerm = '';
+        // setselector(index){
+        //       this.selector= index
+        //       console.log("value of selector:",index);
+        // }
 }
